@@ -9,11 +9,11 @@ A Vite plugin that simplifies Google Maps integration in React applications usin
 - 🛠️ **Developer Tools**: Built-in debug panel for development
 - 📦 **Zero Boilerplate**: No need to manually set up providers
 
-## Installation
+<!--## Installation
 
 ```bash
 npm install vite-plugin-google-maps @vis.gl/react-google-maps
-```
+```-->
 
 ## Quick Start
 
