@@ -3,7 +3,6 @@
   "version": "0.0.1",
   "description": "Plugin Vite: Provider automático + mini devtools para @vis.gl/react-google-maps",
   "type": "module",
-  "author": "Franco Andrés Sánchez",
   "license": "MIT",
   "exports": {
     ".": {
@@ -15,9 +14,26 @@
   "files": [
     "dist"
   ],
+  "author": "Franco Andrés Sánchez <franqsanz.dev@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Franqsanz/vite-plugin-google-maps.git"
+  },
+  "homepage": "https://github.com/Franqsanz/vite-plugin-google-maps#readme",
+  "bugs": {
+    "url": "https://github.com/Franqsanz/vite-plugin-google-maps/issues"
+  },
+  "keywords": [
+    "plugin",
+    "vite",
+    "typescript",
+    "maps",
+    "google-maps",
+    "react"
+  ],
   "peerDependencies": {
     "@vis.gl/react-google-maps": "^1.7.1",
-    "react": ">=19.0.0",
+    "react": ">=19.0.0",  
     "react-dom": ">=19.0.0"
   },
   "devDependencies": {

@@ -11,10 +11,10 @@ Un plugin de Vite que simplifica la integración de Google Maps en aplicaciones 
 - 🛠️ **Herramientas para desarrolladores**: Panel de depuración integrado para desarrollo
 - 📦 **Cero código repetitivo**: No necesitas configurar providers manualmente
 
-<!--## Instalación
-`````bash
-npm install vite-plugin-google-maps @vis.gl/react-google-maps
-````-->
+## Instalación
+```bash
+pnpm install vite-plugin-google-maps
+```
 
 ## Inicio Rápido
 
