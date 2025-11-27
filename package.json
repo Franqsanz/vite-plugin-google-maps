@@ -1,6 +1,6 @@
 {
   "name": "vite-plugin-google-maps",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Plugin Vite: Provider automático + mini devtools para @vis.gl/react-google-maps",
   "type": "module",
   "license": "MIT",
