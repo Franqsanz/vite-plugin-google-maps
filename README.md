@@ -82,8 +82,8 @@ export default App;
 >  export const Map: React.FC<React.ComponentProps<typeof GoogleMapBase>>;
 > }
 > ```
-
-This provides full type safety and autocomplete for the `Map` component props.
+>
+> This provides full type safety and autocomplete for the `Map` component props.
 
 ## Configuration Options
 
