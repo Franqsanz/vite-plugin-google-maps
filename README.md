@@ -69,7 +69,7 @@ function App() {
 export default App;
 ```
 
-> ## TypeScript Setup
+## TypeScript Setup
 > [!WARNING]
 > To use the `Map` component with TypeScript, you need to declare the module type. Create a `types.d.ts` (or any `*.d.ts`) file in your project:
 >
