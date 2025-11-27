@@ -252,8 +252,9 @@ La librer\xEDa "@vis.gl/react-google-maps" NO est\xE1 instalada.
                 border: "none",
                 color: "white",
                 cursor: "pointer",
-                fontSize: "18px",
+                fontSize: "24px",
                 padding: "0",
+                marginLeft: "10px",
                 lineHeight: "1",
                 transition: "transform 0.3s ease",
                 transform: expanded ? "rotate(0deg)" : "rotate(180deg)"
@@ -329,7 +330,7 @@ La librer\xEDa "@vis.gl/react-google-maps" NO est\xE1 instalada.
           ),
 
           bounds && React.createElement("div", null,
-            React.createElement("span", { style: { fontSize: "14px" }}, "Bounds:"), " N:" + bounds.north.toFixed(3) + " S:" + bounds.south.toFixed(3)
+            React.createElement("span", { style: { fontSize: "14px" }}, "Bounds:"), " N: " + bounds.north.toFixed(3) + " S: " + bounds.south.toFixed(3)
           ),
 
           React.createElement("hr", { style: { border: "none", borderTop: "1px solid #fff3", margin: "8px 0" }}),

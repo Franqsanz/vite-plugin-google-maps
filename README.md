@@ -69,6 +69,22 @@ function App() {
 export default App;
 ```
 
+> ## TypeScript Setup
+> [!WARNING]
+> To use the `Map` component with TypeScript, you need to declare the module type. Create a `types.d.ts` (or any `*.d.ts`) file in your project:
+>
+> ```typescript
+> // types.d.ts or vite-env.d.ts
+> declare module "@google-maps/map" {
+>  import React from "react";
+>  import { Map as GoogleMapBase } from "@vis.gl/react-google-maps";
+>  
+>  export const Map: React.FC<React.ComponentProps<typeof GoogleMapBase>>;
+> }
+> ```
+
+This provides full type safety and autocomplete for the `Map` component props.
+
 ## Configuration Options
 
 ### GoogleMapsPluginOptions
@@ -203,22 +219,6 @@ When `debug: true` is enabled, a developer tools panel appears in the bottom-rig
 5. (Optional) Restrict your API key for security
 
 [Learn more](https://developers.google.com/maps/documentation/javascript/get-api-key)
-
-## TypeScript Setup
-
-To use the `Map` component with TypeScript, you need to declare the module type. Create a `types.d.ts` (or any `*.d.ts`) file in your project:
-
-```typescript
-// types.d.ts or vite-env.d.ts
-declare module "@google-maps/map" {
-  import React from "react";
-  import { Map as GoogleMapBase } from "@vis.gl/react-google-maps";
-  
-  export const Map: React.FC<React.ComponentProps<typeof GoogleMapBase>>;
-}
-```
-
-This provides full type safety and autocomplete for the `Map` component props.
 
 ## Troubleshooting
 
