@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="./icon.png" alt="icon">
+  <img src="./icon.png" alt="icon" width="230">
   <h1>vite-plugin-google-maps <em>(Experimental)</em></h1>
 </div>
 
