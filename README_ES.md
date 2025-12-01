@@ -1,5 +1,7 @@
 # vite-plugin-google-maps _(Experimental)_
 
+![icon](./icon.png)
+
 [Read in English](./README.md)
 
 Un plugin de Vite que simplifica la integración de Google Maps en aplicaciones React usando `@vis.gl/react-google-maps`.
