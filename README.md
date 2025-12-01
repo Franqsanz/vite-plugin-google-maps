@@ -1,6 +1,7 @@
-# vite-plugin-google-maps _(Experimental)_
-
-![icon](./icon.png)
+<div align="center">
+  <img src="./icon.png" alt="icon">
+  <h1>vite-plugin-google-maps <em>(Experimental)</em></h1>
+</div>
 
 [Leer en Español](./README_ES.md)
 
