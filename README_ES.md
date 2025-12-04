@@ -199,6 +199,16 @@ Cuando `debug: true` está habilitado, aparece un panel de herramientas en la es
 - **Posición del Mouse**: Coordenadas del cursor en tiempo real
 - **Posición del Clic**: Últimas coordenadas clicadas con dirección geocodificada
 - **Botón Copiar**: Copiar coordenadas clicadas al portapapeles
+- **Tipo de Mapa:** `mapTypeId` actual (roadmap, satellite, hybrid, terrain)
+- **Map ID:** `mapId` activo en uso
+- **Gesture Handling:** Modo de interacción actual (auto, greedy, none, etc.)
+- **Tilt:** Ángulo de inclinación actual del mapa
+- **Heading:** Ángulo de rotación actual
+- **Bounds:** Límites visibles actuales del mapa (norte, sur, este, oeste)
+- **Botón Copy Config:** Copia la configuración completa del mapa (center, zoom, tilt, heading, mapId, typeId, bounds)
+- **Botón My Location:** Centra el mapa usando la geolocalización del navegador
+- **Botón Reset:** Restaura la configuración inicial del mapa
+
 
 ## Cómo Funciona
 

@@ -206,6 +206,16 @@ When `debug: true` is enabled, a developer tools panel appears in the bottom-rig
 - **Mouse Position**: Real-time cursor coordinates
 - **Click Position**: Last clicked coordinates with geocoded address
 - **Copy Button**: Copy clicked coordinates to clipboard
+- **Map Type:** Current `mapTypeId` (roadmap, satellite, hybrid, terrain)
+- **Map ID:** Active `mapId` in use
+- **Gesture Handling:** Current interaction mode (auto, greedy, none, etc.)
+- **Tilt:** Current tilt angle of the map
+- **Heading:** Current rotation angle
+- **Bounds:** Current visible map boundaries (north, south, east, west)
+- **Copy Config Button:** Copies the full map configuration (center, zoom, tilt, heading, mapId, typeId, bounds)
+- **My Location Button:** Centers the map using browser geolocation
+- **Reset Button:** Restores the initial map configuration
+
 
 ## How It Works
 
