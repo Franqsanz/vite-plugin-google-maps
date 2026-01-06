@@ -252,7 +252,7 @@ export function GoogleMapsPlugin(options: GoogleMapsPluginOptions): Plugin {
               marginBottom: "10px"
             }
           },
-          React.createElement("div", { style: { fontWeight: "bold", fontSize: "16px" }}, "Google Maps Devtools"),
+          React.createElement("div", { style: { fontWeight: "bold", fontSize: "16px" }}, "📍 Google Maps Devtools"),
           React.createElement(
             "button",
             {

@@ -243,7 +243,7 @@ La librer\xEDa "@vis.gl/react-google-maps" NO est\xE1 instalada.
               marginBottom: "10px"
             }
           },
-          React.createElement("div", { style: { fontWeight: "bold", fontSize: "16px" }}, "Google Maps Devtools"),
+          React.createElement("div", { style: { fontWeight: "bold", fontSize: "16px" }}, "\u{1F4CD} Google Maps Devtools"),
           React.createElement(
             "button",
             {
