@@ -79,6 +79,5 @@ Example: `Add: support for custom map styles`
 - Update documentation if your changes require it
 
 ## License
----
 
 By contributing to vite-plugin-google-maps, you agree that your contributions will be licensed under the same license as the project.
