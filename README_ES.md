@@ -1,6 +1,6 @@
 <div align="center">
   <img src="./icon.png" alt="icon" width="230">
-  <h1>vite-plugin-google-maps <em>(Experimental)</em></h1>
+  <h1>vite-plugin-google-maps</h1>
 </div>
 
 [Read in English](./README.md)

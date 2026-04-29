@@ -1,6 +1,6 @@
 <div align="center">
   <img src="./icon.png" alt="icon" width="230">
-  <h1>vite-plugin-google-maps <em>(Experimental)</em></h1>
+  <h1>vite-plugin-google-maps</h1>
   <a href="https://www.npmjs.com/package/vite-plugin-google-maps">
     <img src="https://img.shields.io/npm/v/vite-plugin-google-maps" alt="NPM">
   </a>
