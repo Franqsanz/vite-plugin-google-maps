@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="./icon.png" alt="icon" width="230">
+  <img src="./assets/icon.png" alt="icon" width="230">
   <h1>vite-plugin-google-maps</h1>
 </div>
 
@@ -25,29 +25,40 @@ pnpm install vite-plugin-google-maps
 
 Agrega el plugin a tu `vite.config.ts`:
 ```typescript
-import { defineConfig } from 'vite';
+import { defineConfig, loadEnv } from 'vite';
 import react from '@vitejs/plugin-react';
 import { GoogleMapsPlugin } from 'vite-plugin-google-maps';
 
-export default defineConfig({
-  plugins: [
-    react(),
-    GoogleMapsPlugin({
-      apiKey: 'TU_CLAVE_API_GOOGLE_MAPS',
-      libraries: ['places', 'marker'],
-      debug: true, // Habilitar herramientas de desarrollo
-      mapDefaults: {
-        mapId: 'TU_MAP_ID',
-        gestureHandling: 'greedy',
-        defaultCenter: { lat: 40.7128, lng: -74.0060 },
-        defaultZoom: 12,
-        fullscreenControl: true,
-        disableDefaultUI: false,
-      }
-    }),
-  ],
+export default defineConfig(({ mode }) => {
+  const env = loadEnv(mode, process.cwd(), '')
+
+  return {
+    plugins: [
+      react(),
+      GoogleMapsPlugin({
+        apiKey: env.VITE_GOOGLE_MAPS_API_KEY,
+        libraries: ['places', 'marker'],
+        debug: true, // Habilitar herramientas de desarrollo
+        mapDefaults: {
+          mapId: 'TU_MAP_ID',
+          gestureHandling: 'greedy',
+          defaultCenter: { lat: 40.7128, lng: -74.0060 },
+          defaultZoom: 12,
+          fullscreenControl: true,
+          disableDefaultUI: false,
+        }
+      }),
+    ],
+  }
 });
 ```
+
+> [!TIP]
+> Guardá tu clave API en un archivo `.env` y nunca lo subas al control de versiones:
+> ```
+> VITE_GOOGLE_MAPS_API_KEY=tu-clave-api
+> ```
+> Agregá `.env` a tu `.gitignore`.
 
 ### 2. Usa el componente Map
 
@@ -188,6 +199,9 @@ function MultipleMaps() {
 ```
 
 ## Herramientas para Desarrolladores
+![Developer Tools](./assets/devtools1.jpg)
+
+![Developer Tools](./assets/devtools2.jpg)
 
 Cuando `debug: true` está habilitado, aparece un panel de herramientas en la esquina inferior derecha mostrando:
 

@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="./icon.png" alt="icon" width="230">
+  <img src="./assets/icon.png" alt="icon" width="230">
   <h1>vite-plugin-google-maps</h1>
   <a href="https://www.npmjs.com/package/vite-plugin-google-maps">
     <img src="https://img.shields.io/npm/v/vite-plugin-google-maps" alt="NPM">
@@ -33,29 +33,40 @@ pnpm install vite-plugin-google-maps
 Add the plugin to your `vite.config.ts`:
 
 ```typescript
-import { defineConfig } from 'vite';
+import { defineConfig, loadEnv } from 'vite';
 import react from '@vitejs/plugin-react';
 import { GoogleMapsPlugin } from 'vite-plugin-google-maps';
 
-export default defineConfig({
-  plugins: [
-    react(),
-    GoogleMapsPlugin({
-      apiKey: 'YOUR_GOOGLE_MAPS_API_KEY',
-      libraries: ['places', 'marker'],
-      debug: true, // Enable dev tools
-      mapDefaults: {
-        mapId: 'YOUR_MAP_ID',
-        gestureHandling: 'greedy',
-        defaultCenter: { lat: 40.7128, lng: -74.0060 },
-        defaultZoom: 12,
-        fullscreenControl: true,
-        disableDefaultUI: false,
-      }
-    }),
-  ],
+export default defineConfig(({ mode }) => {
+  const env = loadEnv(mode, process.cwd(), '')
+
+  return {
+    plugins: [
+      react(),
+      GoogleMapsPlugin({
+        apiKey: env.VITE_GOOGLE_MAPS_API_KEY,
+        libraries: ['places', 'marker'],
+        debug: true, // Enable dev tools
+        mapDefaults: {
+          mapId: 'YOUR_MAP_ID',
+          gestureHandling: 'greedy',
+          defaultCenter: { lat: 40.7128, lng: -74.0060 },
+          defaultZoom: 12,
+          fullscreenControl: true,
+          disableDefaultUI: false,
+        }
+      }),
+    ],
+  }
 });
 ```
+
+> [!TIP]
+> Store your API key in a `.env` file and never commit it to version control:
+> ```
+> VITE_GOOGLE_MAPS_API_KEY=your-api-key-here
+> ```
+> Add `.env` to your `.gitignore`.
 
 ### 2. Use the Map component
 
@@ -201,6 +212,11 @@ function MultipleMaps() {
 ```
 
 ## Developer Tools
+
+![Developer Tools](./assets/devtools1.jpg)
+
+![Developer Tools](./assets/devtools2.jpg)
+
 
 When `debug: true` is enabled, a developer tools panel appears in the bottom-right corner showing:
 
