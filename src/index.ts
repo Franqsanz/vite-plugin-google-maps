@@ -483,7 +483,8 @@ export function GoogleMapsPlugin(options: GoogleMapsPluginOptions): Plugin {
       // Auto-wrap con APIProvider
       let transformedCode = `import { APIProvider } from "@vis.gl/react-google-maps";\n${code}`;
 
-      const renderMatch = transformedCode.match(/\.render\s*\(\s*([\s\S]+)\s*\)\s*[;,]?\s*$/);
+      // const renderMatch = transformedCode.match(/\.render\s*\(\s*([\s\S]+)\s*\)\s*[;,]?\s*$/);
+      const renderMatch = transformedCode.match(/\.render\s*\(\s*([\s\S]+?)\s*\)\s*;?\s*$/m);
 
       if (!renderMatch) {
         console.warn("⚠️  [vite-plugin-google-maps] No se pudo encontrar .render()");

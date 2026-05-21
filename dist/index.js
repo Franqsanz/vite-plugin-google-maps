@@ -466,7 +466,7 @@ La librer\xEDa "@vis.gl/react-google-maps" NO est\xE1 instalada.
       }
       let transformedCode = `import { APIProvider } from "@vis.gl/react-google-maps";
 ${code}`;
-      const renderMatch = transformedCode.match(/\.render\s*\(\s*([\s\S]+)\s*\)\s*[;,]?\s*$/);
+      const renderMatch = transformedCode.match(/\.render\s*\(\s*([\s\S]+?)\s*\)\s*;?\s*$/m);
       if (!renderMatch) {
         console.warn("\u26A0\uFE0F  [vite-plugin-google-maps] No se pudo encontrar .render()");
         return null;
